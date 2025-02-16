@@ -6,6 +6,8 @@ if (format === 'csv') {
   print('Database,Collection,Index');
 } else if (format === 'plantuml') {
   print('@startuml');
+  print('left to right direction');
+  print('scale 300 width');
 }
 
 // データベース一覧を取得
