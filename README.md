@@ -1,10 +1,10 @@
 # Get MongoDB collection list
 
-これはMongoDBからDatabases/Collections/Indexesの一覧を作成するJavaScriptです。
+This is a JavaScript script to create a list of Databases/Collections/Indexes from MongoDB.
 
-## 使用方法
+## Usage
 
-### テキスト出力
+### Text Output
 
 ```sh
 $ mongosh mongodb://localhost:27017 -f getMongoCollections.js
@@ -26,7 +26,7 @@ Database: wekan
 .
 ```
 
-#### CSV出力
+#### CSV Output
 
 ```sh
 $ FORMAT=csv mongosh mongodb://localhost:27017 -f getMongoCollections.js > output.csv
@@ -46,7 +46,7 @@ $ FORMAT=csv mongosh mongodb://localhost:27017 -f getMongoCollections.js > outpu
 | | |{"email":1}|
 | | |{"modifiedAt":-1}|
 
-#### PlantUML出力
+#### PlantUML Output
 
 ```sh
 $ FORMAT=plantuml mongosh mongodb://localhost:27017 -f getMongoCollections.js > output.puml
