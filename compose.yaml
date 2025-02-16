@@ -1,0 +1,19 @@
+services:
+  wekan:
+    image: wekanteam/wekan
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      - ROOT_URL=http://localhost:8080
+      - MONGO_URL=mongodb://mongo:27017/wekan
+  mongo:
+    image: mongo:latest
+    volumes:
+      - wekan-data:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  wekan-data:
